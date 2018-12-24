@@ -5,15 +5,15 @@
 # Site
 title: 天成的个人博客
 subtitle: Code is my life.
-description: Web,前端,node,ES6,开发,程序员,技术宅,java,android,Python,爬虫
+description: Code is my life.
 keywords: Web,前端,node,ES6,开发,程序员,技术宅,java,android,Python,爬虫
 author: 李天成
-language: 中文
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://litc.pro
+url: https://tianchenglee.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
