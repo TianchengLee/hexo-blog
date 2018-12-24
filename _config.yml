@@ -77,7 +77,7 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
+deploy: 
   type: git
   repo: git@github.com:TianchengLee/TianchengLee.github.io.git
   branch: master
