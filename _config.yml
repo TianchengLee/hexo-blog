@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
-timezone:
+title: 天成的个人博客
+subtitle: Code is my life.
+description: Web,前端,node,ES6,开发,程序员,技术宅,java,android,Python,爬虫
+keywords: Web,前端,node,ES6,开发,程序员,技术宅,java,android,Python,爬虫
+author: 李天成
+language: 中文
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://litc.pro
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
