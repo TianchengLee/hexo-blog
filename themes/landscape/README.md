@@ -71,12 +71,6 @@ google_plus:
 
 Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
 
-```
-![img caption](img url)
-
-{% fancybox img_url [img_thumbnail] [img_caption] %}
-```
-
 ### Sidebar
 
 You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
