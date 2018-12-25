@@ -1,6 +1,6 @@
 ---
 title: 使用hexo部署一个博客服务器
-date: 2018-12-25 18:38:04
+date: 2018-12-25 22:44:00
 tags:
 categories: Hexo
 ---
@@ -124,4 +124,3 @@ Github给每个用户都提供了一个轻量级的web服务器, 每个人的域
 
 	修改配置文件的 `themes: next`
 
-	
