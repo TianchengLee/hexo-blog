@@ -2,6 +2,7 @@
 title: vueday04
 date: 2018-12-25 00:56:13
 tags:
+categories: Vue
 ---
 
 ## vue day04 ##

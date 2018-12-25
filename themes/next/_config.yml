@@ -1,36 +1,18 @@
+# ===============================================================
+# ========================= ATTENTION! ==========================
+# ===============================================================
+# NexT repository is moving here: https://github.com/theme-next
+# ===============================================================
+# It's rebase to v6.0.0 and future maintenance will resume there
+# ===============================================================
+
 # ---------------------------------------------------------------
 # Theme Core Configuration Settings
 # ---------------------------------------------------------------
 
-# If false, merge configs from `_data/next.yml` into default configuration (rewrite).
-# If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
-# And if true, all config from default NexT `_config.yml` must be copied into `next.yml`. Use if you know what you are doing.
-# Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
+# Set to true, if you want to fully override the default configuration.
+# Useful if you don't want to inherit the theme _config.yml configurations.
 override: false
-
-# Allow to cache content generation. Introduced in NexT v6.0.0.
-cache:
-  enable: true
-
-# Redefine custom file paths. Introduced in NexT v6.0.2.
-# If commented, will be used default custom file paths.
-
-# For example, you want to put your custom styles file
-# outside theme directory in root `source/_data`, set
-# `styles: source/_data/styles.styl`
-#custom_file_path:
-  # Default paths: layout/_custom/*
-  #head: source/_data/head.swig
-  #header: source/_data/header.swig
-  #sidebar: source/_data/sidebar.swig
-
-  # Default path: source/css/_variables/custom.styl
-  #variables: source/_data/variables.styl
-  # Default path: source/css/_mixins/custom.styl
-  #mixins: source/_data/mixins.styl
-  # Default path: source/css/_custom/custom.styl
-  #styles: source/_data/styles.styl
-
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -52,8 +34,11 @@ favicon:
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
+# Set default keywords (Use a comma to separate)
+keywords: "Hexo, NexT"
+
 # Set rss to false to disable feed link.
-# Leave rss as empty to use site's feed link, and install hexo-generator-feed: `npm install hexo-generator-feed --save`.
+# Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
 rss:
 
@@ -63,23 +48,13 @@ footer:
   #since: 2015
 
   # Icon between year and copyright info.
-  icon:
-    # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons
-    # `heart` is recommended with animation in red (#ff0000).
-    name: user
-    # If you want to animate the icon, set it to true.
-    animated: false
-    # Change the color of icon, using Hex Code.
-    color: "#808080"
+  icon: user
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
   # -------------------------------------------------------------
-  powered:
-    # Hexo link (Powered by Hexo).
-    enable: true
-    # Version info of Hexo after Hexo link (vX.X.X).
-    version: true
+  # Hexo link (Powered by Hexo).
+  powered: true
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
@@ -87,24 +62,8 @@ footer:
     # Version info of NexT after scheme info (vX.X.X).
     version: true
   # -------------------------------------------------------------
-  # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
-  # http://www.miitbeian.gov.cn
-  beian:
-    enable: false
-    icp:
-
-  # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a>
-
-# Creative Commons 4.0 International License.
-# https://creativecommons.org/share-your-work/licensing-types-examples
-# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-creative_commons:
-  license: by-nc-sa
-  sidebar: false
-  post: false
-
+  #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -122,9 +81,6 @@ seo: false
 # subtitle: Subtitle
 index_with_subtitle: false
 
-# Automatically add external URL with BASE64 encrypt & decrypt.
-exturl: false
-
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -135,21 +91,20 @@ exturl: false
 # Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
-# External url should start with http:// or https:// .
 menu:
   home: / || home
   #about: /about/ || user
   #tags: /tags/ || tags
-  #categories: /categories/ || th
+  categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
-# Enable/Disable menu icons / item badges.
-menu_settings:
-  icons: true
-  badges: false
+# Enable/Disable menu icons.
+menu_icons:
+  enable: true
+
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -157,17 +112,14 @@ menu_settings:
 
 # Schemes
 # scheme: Muse
-# scheme: Mist
-scheme: Pisces
-#scheme: Gemini
+scheme: Mist
+# scheme: Pisces
+# scheme: Gemini
 
 
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
-
-# Posts / Categories / Tags in sidebar.
-site_state: true
 
 # Social Links.
 # Usage: `Key: permalink || icon`
@@ -177,7 +129,6 @@ site_state: true
 #social:
   #GitHub: https://github.com/yourname || github
   #E-Mail: mailto:yourname@gmail.com || envelope
-  #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -192,32 +143,18 @@ social_icons:
   icons_only: false
   transition: false
 
-# Follow me on GitHub banner in right-top corner.
-# Usage: `permalink || title`
-# Value before `||` delimeter is the target permalink.
-# Value after `||` delimeter is the title and aria-label name.
-#github_banner: https://github.com/yourname || Follow me on GitHub
-
 # Blog rolls
 links_icon: link
 links_title: Links
 links_layout: block
 #links_layout: inline
 #links:
-  #Title: http://example.com
+  #Title: http://example.com/
 
 # Sidebar Avatar
-avatar:
-  # in theme directory(source/images): /images/avatar.gif
-  # in site  directory(source/uploads): /uploads/avatar.gif
-  # You can also use other linking images.
-  url: #/images/avatar.gif
-  # If true, the avatar would be dispalyed in circle.
-  rounded: false
-  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
-  opacity: 1
-  # If true, the avatar would be rotated with the cursor.
-  rotated: false
+# in theme directory(source/images): /images/avatar.gif
+# in site  directory(source/uploads): /uploads/avatar.gif
+#avatar: /images/avatar.gif
 
 # Table Of Contents in the Sidebar
 toc:
@@ -229,16 +166,16 @@ toc:
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
 
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+#creative_commons: by-nc-sa
+#creative_commons:
+
 sidebar:
   # Sidebar Position, available value: left | right (only for Pisces | Gemini).
   position: left
   #position: right
-
-  # Manual define the sidebar width.
-  # If commented, will be default for:
-  # Muse | Mist: 320
-  # Pisces | Gemini: 240
-  #width: 300
 
   # Sidebar Display, available value (only for Muse | Mist):
   #  - post    expand on posts automatically. Default.
@@ -282,40 +219,21 @@ auto_excerpt:
   enable: false
   length: 150
 
-# Read more button
-# If true, the read more button would be displayed in excerpt section
-read_more_btn: true
-
 # Post meta display settings
 post_meta:
   item_text: true
   created_at: true
-  updated_at:
-    enabled: true
-    # If true, show updated date label only if `updated date` different from 'created date' (post edited in another day than was created).
-    # And if post will edited in same day as created, edited time will show in popup title under created time label.
-    # If false show anyway, but if post edited in same day, show only edited time.
-    another_day: true
+  updated_at: false
   categories: true
 
 # Post wordcount display settings
-# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
-symbols_count_time:
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: false
+  min2read: false
+  totalcount: false
   separated_meta: true
-  item_text_post: true
-  item_text_total: false
-  awl: 4
-  wpm: 275
-
-codeblock:
-  # Manual define the border radius in codeblock
-  # Leave it empty for the default 1
-  border_radius:
-  # Add copy button on codeblock
-  copy_button:
-    enable: false
-    # Show text copy result
-    show_result: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -324,51 +242,30 @@ codeblock:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-# If true, reward would be displayed in every article by default.
-# And you can show or hide one article specially through add page variable `reward: true/false`.
-reward:
-  enable: false
-  #comment: Donate comment here
-  #wechatpay: /images/wechatpay.jpg
-  #alipay: /images/alipay.jpg
-  #bitcoin: /images/bitcoin.jpg
+#reward_comment: Donate comment here
+#wechatpay: /images/wechatpay.jpg
+#alipay: /images/alipay.jpg
+#bitcoin: /images/bitcoin.png
 
-# Related popular posts
-# Dependencies: https://github.com/tea3/hexo-related-popular-posts
-related_posts:
+# Declare license on posts
+post_copyright:
   enable: false
-  title: # custom header, leave empty to use the default one
-  display_in_home: false
-  params:
-    maxCount: 5
-    #PPMixingRate: 0.0
-    #isDate: false
-    #isImage: false
-    #isExcerpt: false
-
-# Post edit
-# Dependencies: https://github.com/hexojs/hexo-deployer-git
-post_edit:
-  enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source.
-  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit.
+  license: CC BY-NC-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
 
-# Disable Baidu tranformation on mobile devices.
-disable_baidu_tranformation: false
-
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: false
 
-# Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
+# Android Chrome header panel color ($black-deep).
 android_chrome_color: "#222"
 
 # Custom Logo.
-# Do not support Scheme Mist currently.
+# !!Only available for Default Scheme currently.
 # Options:
 #   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
@@ -377,12 +274,10 @@ custom_logo:
   image:
 
 # Code Highlight theme
-# Available values: normal | night | night eighties | night blue | night bright
+# Available value:
+#    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
-
-# Enable "cheers" for archive page.
-cheers_enabled: true
 
 
 # ---------------------------------------------------------------
@@ -408,13 +303,13 @@ font:
   # `family: Times New Roman`. Without any quotes.
   # `size: xx`. Use `px` as unit.
 
-  # Global font settings used for all elements in <body>.
+  # Global font settings used on <body> element.
   global:
     external: true
     family: Lato
     size:
 
-  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
   # Fallback to `global` font settings.
   headings:
     external: true
@@ -445,61 +340,14 @@ font:
 # Third Party Services Settings
 # ---------------------------------------------------------------
 
-# Math Equations Render Support
-math:
+# MathJax Support
+mathjax:
   enable: false
+  per_page: false
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
-  # Default(true) will load mathjax/katex script on demand
-  # That is it only render those page who has 'mathjax: true' in Front Matter.
-  # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.
-  per_page: true
-
-  engine: mathjax
-  #engine: katex
-
-  # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
-  mathjax:
-    # Use 2.7.1 as default, jsdelivr as default CDN, works everywhere even in China
-    cdn: //cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-    # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
-    #cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-    # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
-    #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
-
-  # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin)
-  # needed to full Katex support.
-  katex:
-    # Use 0.7.1 as default, jsdelivr as default CDN, works everywhere even in China
-    cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
-    # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
-    #cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
-
-# PDF Support
-# Dependencies: https://github.com/theme-next/theme-next-pdf
-pdf:
-  enable: false
-
-  # Default(true) will load PDFObject/PDF.js script on demand
-  # That is it only render those page who has 'pdf: true' in Front Matter.
-  # If you set it to false, it will load PDFObject/PDF.js srcipt EVERY PAGE.
-  per_page: true
-
-  height: 500px
-
-  pdfobject:
-    # Use 2.1.1 as default, jsdelivr as default CDN, works everywhere even in China
-    cdn: //cdn.jsdelivr.net/npm/pdfobject@2.1.1/pdfobject.min.js
-    # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
-    #cdn: //cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js
-
-# Han Support
-# Dependencies: https://github.com/theme-next/theme-next-han
+# Han Support docs: https://hanzi.pro/
 han: false
-
-# Pangu Support
-# Dependencies: https://github.com/theme-next/theme-next-pangu
-# For more information: https://github.com/vinta/pangu.js
-pangu: false
 
 # Swiftype Search API Key
 #swiftype_key:
@@ -507,16 +355,17 @@ pangu: false
 # Baidu Analytics ID
 #baidu_analytics:
 
-# Growingio Analytics ID
-# Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com
-#growingio_analytics: #your projectId
+# Duoshuo ShortName
+#duoshuo_shortname:
 
 # Disqus
 disqus:
   enable: false
   shortname:
   count: true
-  lazyload: false
+
+# Hypercomments
+#hypercomments_id:
 
 # changyan
 changyan:
@@ -529,48 +378,41 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  enable: true
+  appid: IewqjGGWrtQhLdEX5ysm5fKf-gzGzoHsz  # your leancloud application appid
+  appkey: f2kiSivj8SPBWDJ0hHFmbNK3  # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
+  placeholder: 请和谐评论哟~~ # comment box placeholder
   avatar: mm # gravatar style
-  guest_info: nick,mail,link # custom comment header
+  guest_info: nick,mail # custom comment header
   pageSize: 10 # pagination size
-  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+
+
+# Support for youyan comments system.
+# You can get your uid from http://www.uyan.cc
+#youyan_uid: your uid
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
 
 # Gitment
-# Introduction: https://imsun.net/posts/gitment-introduction
+# Introduction: https://imsun.net/posts/gitment-introduction/
+# You can get your Github ID from https://api.github.com/users/<Github username>
 gitment:
   enable: false
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
   cleanly: false # Hide 'Powered by ...' on footer, and more
-  language: # Force language, or auto switch by theme
-  github_user: # MUST HAVE, Your Github Username
-  github_repo: # MUST HAVE, The name of the repo you use to store Gitment comments
+  language: zh-Hans # Force language, or auto switch by theme
+  github_user: # MUST HAVE, Your Github ID
+  github_repo: # MUST HAVE, The repo you use to store Gitment comments
   client_id: # MUST HAVE, Github client id for the Gitment
   client_secret: # EITHER this or proxy_gateway, Github access secret token for the Gitment
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
-
-# Gitalk
-# Demo: https://gitalk.github.io
-# Reference: https://asdfv1929.github.io/2018/01/20/gitalk/, https://liujunzhou.cn/2018/8/10/gitalk-error/#more
-gitalk:
-  enable: false
-  github_id:  # Github repo owner
-  repo:  # Repository name to store issues.
-  client_id:  # Github Application Client ID
-  client_secret:  # Github Application Client Secret
-  admin_user:  # GitHub repo owner and collaborators, only these guys can initialize github issues
-  distraction_free_mode: true # Facebook-like distraction free mode
 
 # Baidu Share
 # Available value:
@@ -579,11 +421,19 @@ gitalk:
 #baidushare:
 ##  type: button
 
-# addthis Share, see: https://www.addthis.com
+# Share
+# This plugin is more useful in China, make sure you known how to use it.
+# And you can find the use guide at official webiste: http://www.jiathis.com/.
+# Warning: JiaThis does not support https.
+#jiathis:
+  ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
+# Share
+#duoshuo_share: true
+
 # NeedMoreShare2
-# Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
+# This plugin is a pure javascript sharing lib which is useful in China.
 # See: https://github.com/revir/need-more-share2
 # Also see: https://github.com/DzmVasileusky/needShareButton
 # iconStyle: default | box
@@ -611,30 +461,35 @@ needmoreshare2:
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
 # Google Webmaster tools verification setting
-# See: https://www.google.com/webmasters
+# See: https://www.google.com/webmasters/
 #google_site_verification:
 
 # Google Analytics
 #google_analytics:
 
 # Bing Webmaster tools verification setting
-# See: https://www.bing.com/webmaster
+# See: https://www.bing.com/webmaster/
 #bing_site_verification:
 
 # Yandex Webmaster tools verification setting
-# See: https://webmaster.yandex.ru
+# See: https://webmaster.yandex.ru/
 #yandex_site_verification:
-
-# Baidu Webmaster tools verification setting
-# See: https://ziyuan.baidu.com/site
-#baidu_site_verification:
 
 # CNZZ count
 #cnzz_siteid:
 
 # Application Insights
-# See https://azure.microsoft.com/en-us/services/application-insights
+# See https://azure.microsoft.com/en-us/services/application-insights/
 # application_insights:
+
+# Make duoshuo show UA
+# user_id must NOT be null when admin_enable is true!
+# you can visit http://dev.duoshuo.com get duoshuo user id.
+duoshuo_info:
+  ua_enable: true
+  admin_enable: false
+  user_id: 0
+  #admin_nickname: Author
 
 # Post widgets & FB/VK comments settings.
 # ---------------------------------------------------------------
@@ -654,7 +509,7 @@ facebook_comments_plugin:
   enable:       false
   num_of_posts: 10    # min posts num is 1
   width:        100%  # default width is 550px
-  scheme:       dark # default scheme is light (light or dark)
+  scheme:       light # default scheme is light (light or dark)
 
 # VKontakte API Support.
 # To get your AppID visit https://vk.com/editapp?act=create
@@ -679,11 +534,6 @@ leancloud_visitors:
   enable: false
   app_id: #<app_id>
   app_key: #<app_key>
-  # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
-  # If you don't care about security in lc counter and just want to use it directly
-  # (without hexo-leancloud-counter-security plugin), set the `security` to `false`.
-  security: true
-  betterPerformance: false
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
@@ -695,23 +545,30 @@ firestore:
   projectId: #required
   bluebird: false #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
 
-# Show Views/Visitors of the website/page with busuanzi.
-# Get more information on http://ibruce.info/2015/04/04/busuanzi
+# Show PV/UV of the website/page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
+  # count values only if the other configs are false
   enable: false
-  total_visitors: true
-  total_visitors_icon: user
-  total_views: true
-  total_views_icon: eye
-  post_views: true
-  post_views_icon: eye
+  # custom uv span for the whole site
+  site_uv: true
+  site_uv_header: <i class="fa fa-user"></i>
+  site_uv_footer:
+  # custom pv span for the whole site
+  site_pv: true
+  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv_footer:
+  # custom pv span for one page only
+  page_pv: true
+  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_footer:
 
 
 # Tencent analytics ID
-#tencent_analytics:
+# tencent_analytics:
 
 # Tencent MTA ID
-#tencent_mta:
+# tencent_mta:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
@@ -722,24 +579,19 @@ baidu_push: false
 #
 # API Documentation:
 # https://developers.google.com/google-apps/calendar/v3/reference/events/list
-# Enabled APIs and services
-# api_key: https://console.developers.google.com
-# Create & manage a public Google calendar: https://support.google.com/calendar/answer/37083?hl=en
 calendar:
   enable: false
-  calendar_id: <required> # Your Google account E-Mail
+  calendar_id: <required>
   api_key: <required>
   orderBy: startTime
-  offsetMax: 24 # Time Range
-  offsetMin: 4 # Time Range
+  offsetMax: 24
+  offsetMin: 4
   timeZone:
   showDeleted: false
   singleEvents: true
   maxResults: 250
 
 # Algolia Search
-# See: https://github.com/theme-next/hexo-theme-next/blob/master/docs/ALGOLIA-SEARCH.md
-# Dependencies: https://github.com/theme-next/theme-next-algolia-instant-search
 algolia_search:
   enable: false
   hits:
@@ -750,7 +602,7 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
-# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
+# Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
   enable: false
   # if auto, trigger search by changing input
@@ -758,23 +610,16 @@ local_search:
   trigger: auto
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
-  # unescape html strings to the readable one
-  unescape: false
-
-# Bookmark Support
-# Dependencies: https://github.com/theme-next/theme-next-bookmark
-bookmark:
-  enable: false
-  # if auto
-  #   - save the reading position when closing the page
-  #   - or clicking the bookmark-icon
-  # if manual, only save it by clicking the bookmark-icon
-  save: auto
 
 
 # ---------------------------------------------------------------
 # Tags Settings
 # ---------------------------------------------------------------
+
+# External URL with BASE64 encrypt & decrypt.
+# Usage: {% exturl text url "title" %}
+# Alias: {% extlink text url "title" %}
+exturl: false
 
 # Note tag (bs-callout).
 note:
@@ -801,13 +646,6 @@ tabs:
     labels: true
   border_radius: 0
 
-# Reading progress bar
-# Dependencies: https://github.com/theme-next/theme-next-reading-progress
-reading_progress:
-  enable: false
-  color: "#37c6c0"
-  height: 2px
-
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -833,52 +671,42 @@ motion:
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 
-# Fancybox. There is support for old version 2 and new version 3.
-# Please, choose only any one variant, do not need to install both.
-# For install 2.x: https://github.com/theme-next/theme-next-fancybox
-# For install 3.x: https://github.com/theme-next/theme-next-fancybox3
-fancybox: false
-
-# Added switch option for separated repo in 6.0.0.
-# Dependencies: https://github.com/theme-next/theme-next-fastclick
-fastclick: false
-
-# Added switch option for separated repo in 6.0.0.
-# Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
-lazyload: false
+# Fancybox
+fancybox: true
 
 # Progress bar in the top during page loading.
-# Dependencies: https://github.com/theme-next/theme-next-pace
 pace: false
 # Themes list:
-# pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
-# pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
-# pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
+#pace-theme-big-counter
+#pace-theme-bounce
+#pace-theme-barber-shop
+#pace-theme-center-atom
+#pace-theme-center-circle
+#pace-theme-center-radar
+#pace-theme-center-simple
+#pace-theme-corner-indicator
+#pace-theme-fill-left
+#pace-theme-flash
+#pace-theme-loading-bar
+#pace-theme-mac-osx
+#pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-# Dependencies: https://github.com/theme-next/theme-next-canvas-nest
-canvas_nest:
-  enable: false
-  onmobile: true # display on mobile or not
-  color: '0,0,255' # RGB values, use ',' to separate
-  opacity: 0.5 # the opacity of line: 0~1
-  zIndex: -1 # z-index property of the background
-  count: 99 # the number of lines
+canvas_nest: false
 
-# JavaScript 3D library.
-# Dependencies: https://github.com/theme-next/theme-next-three
 # three_waves
 three_waves: false
+
 # canvas_lines
 canvas_lines: false
+
 # canvas_sphere
 canvas_sphere: false
 
 # Only fit scheme Pisces
-# Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # Canvas-ribbon
 # size: The width of the ribbon.
 # alpha: The transparency of the ribbon.
@@ -900,158 +728,86 @@ vendors:
   _internal: lib
 
   # Internal version: 2.1.3
-  # Example:
-  # jquery: //cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js
-  # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
   jquery:
 
   # Internal version: 2.1.5
-  # See: http://fancyapps.com/fancybox
-  # Example:
-  # fancybox: //cdn.jsdelivr.net/npm/fancybox@3.0.0/dist/js/jquery.fancybox.pack.js
-  # fancybox_css: //cdn.jsdelivr.net/npm/fancybox@3.0.0/dist/css/jquery.fancybox.min.css
-  # fancybox: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js
-  # fancybox_css: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css
+  # See: http://fancyapps.com/fancybox/
   fancybox:
   fancybox_css:
 
   # Internal version: 1.0.6
   # See: https://github.com/ftlabs/fastclick
-  # Example:
-  # fastclick: //cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js
-  # fastclick: //cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
   fastclick:
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
-  # Example:
-  # lazyload: //cdn.jsdelivr.net/npm/jquery_lazyload@1.9.7/jquery.lazyload.min.js
-  # lazyload: //cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
   lazyload:
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  # Example:
-  # velocity: https://cdn.jsdelivr.net/npm/velocity-animate@1.2.1/velocity.min.js
-  # velocity: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
   velocity:
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  # Example:
-  # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1.2.1/velocity.ui.min.js
-  # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
   velocity_ui:
 
   # Internal version: 0.7.9
-  # See: https://faisalman.github.io/ua-parser-js
-  # Example:
-  # ua_parser: //cdn.jsdelivr.net/npm/ua-parser-js@0.7.17/src/ua-parser.min.js
-  # ua_parser: //cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.9/ua-parser.min.js
+  # See: https://faisalman.github.io/ua-parser-js/
   ua_parser:
 
   # Internal version: 4.6.2
-  # See: http://fontawesome.io
-  # Example:
-  # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
-  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css
+  # See: http://fontawesome.io/
   fontawesome:
 
-  # Internal version: 2.4.1
-  # See: https://www.algolia.com
-  # Example:
-  # algolia_instant_js: //cdn.jsdelivr.net/npm/instantsearch.js@2.4.1/dist/instantsearch.js
-  # algolia_instant_css: //cdn.jsdelivr.net/npm/instantsearch.js@2.4.1/dist/instantsearch.min.css
+  # Internal version: 1
+  # https://www.algolia.com
   algolia_instant_js:
   algolia_instant_css:
 
   # Internal version: 1.0.2
   # See: https://github.com/HubSpot/pace
-  # Example:
-  # pace: //cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js
-  # pace: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
-  # pace_css: //cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css
-  # pace_css: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
+  # Or use direct links below:
+  # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
+  # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
   pace:
   pace_css:
 
   # Internal version: 1.0.0
-  # See: https://github.com/theme-next/theme-next-canvas-nest
-  # Example:
-  # canvas_nest: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js
-  # canvas_nest_nomobile: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest-nomobile.min.js
+  # https://github.com/hustcc/canvas-nest.js
   canvas_nest:
-  canvas_nest_nomobile:
 
-  # Internal version: 1.0.0
-  # See: https://github.com/theme-next/theme-next-three
-  # Example:
-  # three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/three.min.js
-  # three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/three-waves.min.js
-  # canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/canvas_lines.min.js
-  # canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/canvas_sphere.min.js
+  # three
   three:
+
+  # three_waves
+  # https://github.com/jjandxa/three_waves
   three_waves:
+
+  # three_waves
+  # https://github.com/jjandxa/canvas_lines
   canvas_lines:
+
+  # three_waves
+  # https://github.com/jjandxa/canvas_sphere
   canvas_sphere:
 
   # Internal version: 1.0.0
-  # See: https://github.com/zproo/canvas-ribbon
+  # https://github.com/zproo/canvas-ribbon
   canvas_ribbon:
 
   # Internal version: 3.3.0
-  # See: https://github.com/ethantw/Han
+  # https://github.com/ethantw/Han
   han:
 
-  # Internal version: 3.3.0
-  # See: https://github.com/vinta/pangu.js
-  # Example:
-  # pangu: //cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js
-  # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js
-  pangu:
-
   # needMoreShare2
-  # See: https://github.com/revir/need-more-share2
-  # Example:
-  # needmoreshare2_js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.js
-  # needmoreshare2_css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.css
-  needmoreshare2_js:
-  needmoreshare2_css:
+  # https://github.com/revir/need-more-share2
+  needMoreShare2:
 
-  # bookmark
-  # See: https://github.com/theme-next/theme-next-bookmark
-  # Example:
-  # bookmark: //cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1.0.0/bookmark.min.js
-  bookmark:
-
-  # reading_progress
-  # See: https://github.com/theme-next/theme-next-reading-progress
-  # Example:
-  # reading_progress: //cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js
-  reading_progress:
-
-  # valine comment
-  # See: https://github.com/xCss/Valine
-  # Example:
-  # valine: //cdn.jsdelivr.net/npm/valine@1.3.3/dist/Valine.min.js
-  # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.3/Valine.min.js
-  valine:
-
-  # Internal version: 1.4.0
-  # See: https://github.com/gitalk/gitalk
-  # Example:
-  # gitalk_js: https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js
-  # gitalk_css: https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.css
-  gitalk_js:
-  gitalk_css:
-
-  # Internal version: 0.7.3
-  # See: https://github.com/emn178/js-md5
-  # Example:
-  # md5: https://cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js
-  md5:
 
 # Assets
 css: css
 js: js
 images: images
+
+# Theme version
+version: 5.1.4

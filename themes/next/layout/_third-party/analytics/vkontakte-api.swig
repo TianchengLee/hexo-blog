@@ -1,7 +1,7 @@
 {% if theme.vkontakte_api.enable %}
 
 	<div id="vk_api_transport"></div>
-	<script>
+	<script type="text/javascript">
 		window.vkAsyncInit = function() {
 			VK.init({
 				apiId: {{ theme.vkontakte_api.app_id }}

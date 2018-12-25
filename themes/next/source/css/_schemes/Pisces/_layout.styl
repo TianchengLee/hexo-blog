@@ -1,14 +1,8 @@
 .header {
   position: relative;
   margin: 0 auto;
-  width: $content-desktop;
+  width: $main-desktop;
 
-  +desktop-large() {
-    width: $content-desktop-large;
-  }
-  +desktop-largest() {
-    width: $content-desktop-largest;
-  }
   +tablet() {
     width: auto;
   }
@@ -22,13 +16,13 @@
   top: 0;
   overflow: hidden;
   padding: 0;
-  width: $sidebar-desktop;
+  width: 240px;
   background: white;
   box-shadow: $box-shadow-inner;
   border-radius: $border-radius-inner;
 
   +desktop-large() {
-    .container & { width: $sidebar-desktop; }
+    .container & { width: 240px; }
   }
   +tablet() {
     position: relative;
@@ -53,6 +47,7 @@
 }
 
 .container .main-inner {
+  width: $main-desktop;
 
   +tablet() {
     width: auto;
@@ -66,7 +61,7 @@
   float: right;
   box-sizing: border-box;
   padding: $content-desktop-padding;
-  width: $content-wrap;
+  width: $content-desktop;
   background: white;
   min-height: 700px;
   box-shadow: $box-shadow-inner;
@@ -88,7 +83,7 @@
 .sidebar {
   position: static;
   float: left;
-  margin-left: -100%;
+  margin-top: 300px;
   width: $sidebar-desktop;
   background: $body-bg-color;
   box-shadow: none;
@@ -103,7 +98,9 @@
 
 .sidebar-toggle { display: none; }
 
+
 .footer-inner {
+  width: $main-desktop;
   padding-left: 260px;
 
   +tablet() {
@@ -117,6 +114,8 @@
     padding-right: 0 !important;
   }
 }
+
+
 
 .sidebar-position-right {
   .header-inner { right: 0; }

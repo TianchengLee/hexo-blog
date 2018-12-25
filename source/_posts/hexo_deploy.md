@@ -2,6 +2,7 @@
 title: 使用hexo部署一个博客服务器
 date: 2018-12-25 18:38:04
 tags:
+categories: Hexo
 ---
 
 
@@ -119,4 +120,8 @@ Github给每个用户都提供了一个轻量级的web服务器, 每个人的域
 	
 	将next的源码克隆到当前目录的themes目录下
 
-		git clone https://github.com/iissnan/hexo-theme-next themes/next
+		git clone https://github.com/theme-next/hexo-theme-next themes/next
+
+	修改配置文件的 `themes: next`
+
+	
