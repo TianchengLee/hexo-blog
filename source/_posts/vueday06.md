@@ -7,6 +7,8 @@ categories: Vue
 
 ## vue day06 ##
 
+
+
 ### 路由的基本使用 ###
 
 1. 导入vue-router的js文件
