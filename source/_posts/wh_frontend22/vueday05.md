@@ -2,7 +2,7 @@
 title: vueday05
 date: 2018-12-25 18:56:13
 tags:
-categories: Vue
+categories: 武汉前端22期
 ---
 
 ## vueday05 ##

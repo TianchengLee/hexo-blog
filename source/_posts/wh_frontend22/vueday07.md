@@ -2,7 +2,7 @@
 title: vueday07
 date: 2018-12-28 17:13:13
 tags:
-categories: Vue
+categories: 武汉前端22期
 ---
 
 ## vue day07 ##

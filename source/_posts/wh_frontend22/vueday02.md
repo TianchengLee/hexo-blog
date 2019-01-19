@@ -1,8 +1,8 @@
 ---
 title: vueday02
-date: 2018-12-25 00:56:13
+date: 2018-12-25 00:57:13
 tags:
-categories: Vue
+categories: 武汉前端22期
 ---
 
 
