@@ -1,10 +1,8 @@
 ---
-title: vueday01
-date: 2018-12-25 00:56:13
+title: 01 vue 基础  事件修饰符
+date: 2018-12-27 23:42:04
 tags:
 ---
-
-
 ## vue day01 ##
 
 ### hello vue ###

@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 天成的个人博客
-subtitle: Code is my life.
-description: Code is my life.
-keywords: Web,前端,node,ES6,开发,程序员,技术宅,java,android,Python,爬虫
-author: 李天成
-language: zh-CN
+title: 王相的个人博客
+subtitle: 时间不负有心人
+description: 时间不负有心人
+keywords: 前端,web开发,php,vue,node,广交朋友,欢迎交流!
+author: WangXiang
+language: zh-CN 
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://tianchenglee.github.io
+url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -77,7 +77,8 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: 
+deploy:
   type: git
-  repo: git@github.com:TianchengLee/TianchengLee.github.io.git
+  repo: git@github.com:XiangWx/XiangWx.github.io.git
   branch: master
+  

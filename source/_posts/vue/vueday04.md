@@ -1,9 +1,8 @@
 ---
-title: vueday04
-date: 2018-12-25 00:56:13
+title: 04 vue-resource 定义全局配置请求的根路径 动画
+date:  2018-12-27 23:42:04
 tags:
 ---
-
 ## vue day04 ##
 
 ### vue-resource的使用 ###
@@ -46,6 +45,8 @@ tags:
 
 		Vue.http.options.root = '/root'
 
+		例如：Vue.http.options.root = '/http://www.xxx：xxxx'
+
 	**注意: 如果配置了全局的根路径, 想让其生效, 发送请求时URL必须是相对路径, 例如: `vm.$http.get('url')`, 而不是 `vm.$http.get('/url')`**
 
 	由于在项目开发中, 每次提交表单数据都需要使用传统表单提交, 所以需要将`emulateJSON`选项全局开启:
@@ -53,6 +54,10 @@ tags:
 		Vue.http.options.emulateJSON = true
 
 	当开启了全局的emulateJSON选项后, 以后发送post请求, 第三个参数就不需要再配置`emulateJSON`选项了
+
+	Vue中 如果全局配置了根路径 在后面发送get post请求的时候 要特别注意 url地址的位置不能再加‘/’
+  否则会报错
+
 
 ### 动画 ###
 
@@ -150,3 +155,6 @@ tags:
 	.v-leave-active {
 	  transition: all 0.5s ease;
 	}
+
+
+	### API wx.previewImage 实现图片点击全屏预览功能
